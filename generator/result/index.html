@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="Nothing Changed" property="og:title">
+        <meta content="Yeah nothing changed" property="og:description">
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+            });
+            let title = params.title;
+            let desc = params.description;
+            //document.getElementById("demo").innerHTML = value;
+            document.querySelector('meta[property="og:title"]').setAttribute("content", title);
+            document.querySelector('meta[property="og:description"]').setAttribute("content", desc);
+        </script>
+    </body>
+</html>
