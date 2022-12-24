@@ -3,16 +3,24 @@
     <head>
         <meta charset="utf-8">
         <title>Embed Generator</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
     </head>
     <body>
         <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-        <form id="frm1" action="submitscript.php" target="dummyframe">
-            <label for="title">Title:</label><br>
-            <input type="text" id ="title"><br>
-            <label for="description">Description:</label><br>
-            <input type="text" id="description"><br>
-        </form>
-        <input type="button" onclick="myFunction()" value="Submit">
+        <h1>Embed Maker</h1>
+        <div id="form">
+            <form id="frm1" action="submitscript.php" target="dummyframe">
+                <label for="title">Title:</label><br>
+                <input type="text" id ="title"><br><br>
+                <label for="description">Description:</label><br>
+                <input type="text" id="description"><br><br>
+            </form>
+            <input id="submit" type="button" onclick="myFunction()" value="Submit">
+        </div>
+        <input id="back" type="button" onclick="reverse()" value="Back" style="visibility:hidden" >
+        
+        <p id="msg"></p>
         <p id="demo"></p>
 
         <script>
@@ -25,11 +33,26 @@
             // }
             let title = x.elements[0].value
             let desc = x.elements[1].value
-            text += title + "<br>"
-            text += desc + "<br>"
-            document.getElementById("demo").innerHTML = text;
+            text += `<meta content="${title}" property="og:title"> `
+            text += `<meta content="${desc}" property="og:description">`
+            //document.getElementById("demo").innerHTML = text;
+            document.getElementById("demo").textContent = text;
+            document.getElementById("demo").style.visibility="visible"
+            document.getElementById("msg").style.visibility="visible"
+            document.getElementById("msg").textContent = "Add this to the head of your site:"
+            document.getElementById("form").style.visibility="hidden"
+            document.getElementById("back").style.visibility="visible"
+            document.getElementById("form").style.pointerEvents="none";
             //window.location.replace("https://rexbluefox.github.io/generator/result/")
-            window.location.replace("https://rexbluefox.github.io/generator/result?title="+title+"&description="+desc)
+            //window.location.replace("https://rexbluefox.github.io/generator/result?title="+title+"&description="+desc)
+            }
+
+            function reverse(){
+                document.getElementById("form").style.visibility="visible"
+                document.getElementById("form").style.pointerEvents="auto";
+                document.getElementById("demo").style.visibility="hidden"
+                document.getElementById("msg").style.visibility="hidden"
+                document.getElementById("back").style.visibility="hidden"
             }
         </script>
     </body>

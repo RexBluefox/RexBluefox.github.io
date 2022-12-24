@@ -1,0 +1,79 @@
+:root {
+    --main-bg-color: #3c6e71;
+    --second-bg-color: #353535;
+    --main-fg-color: #ffffff;
+    --second-fg-color: #d9d9d9;
+    --other-color: #284b63;
+}
+
+#msg{
+    color:var(--second-fg-color)
+}
+input[type=text] {
+    background-color: var(--second-bg-color);
+    color:var(--main-fg-color);
+    transition: width 0.4s ease-in-out;
+    border: none;
+    border-bottom: 2px solid var(--other-color);
+}
+body{
+    background-color: var(--main-bg-color);
+    color:var(--second-fg-color);
+    font-size: larger;
+    font-weight: 900;
+    font-family: "Kanit";
+
+}
+#form{
+    max-width: 500px;
+    height: auto;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+#submit,#back{
+    color: var(--second-fg-color);
+    background-color: var(--second-bg-color);
+}
+#demo{
+    /*max-width: 500px;*/
+    height: auto;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -30%) 
+}
+#back{
+    position: absolute;
+    margin: auto;
+    top: 55%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%)
+}
+#msg {
+    max-width: 500px;
+    height: auto;
+    position: absolute;
+    margin: 0;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+h1{
+
+    height: auto;
+    position: absolute;
+    top:10%;
+    margin: auto;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 700%;
+}
