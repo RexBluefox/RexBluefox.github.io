@@ -1,0 +1,29 @@
+counter {
+    font-family: 'Work Sans', sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    font-size: 7em;
+}
+#images {
+    /* line-height: 10; */
+   
+   /* -webkit-column-count: 5;
+   -webkit-column-gap:   0px; */
+   /* -moz-column-count:    5;
+   -moz-column-gap:      0px; */
+   column-count:         11;
+   column-gap:           auto;
+}
+#images img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #344e65;
+  }
