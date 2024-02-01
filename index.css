@@ -1,0 +1,28 @@
+@import 'https://fonts.googleapis.com/css?family=Inter';
+body {
+  background-color: #232428;
+  font-family: "Inter", "sans-serif";
+}
+
+a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  text-decoration: none;
+  background-color: black;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+}
+
+#play {
+  margin-right: 25px;
+  color: white;
+  border-radius: 50%;
+}/*# sourceMappingURL=index.css.map */

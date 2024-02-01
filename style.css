@@ -1,0 +1,312 @@
+body {
+  margin: 0;
+  background-color: black;
+  animation: body 1s linear forwards;
+  animation-delay: 1s;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#main-page {
+  margin: 0;
+  opacity: 0;
+  animation: main-page 1s linear forwards;
+  animation-delay: 1s;
+}
+
+#netflix {
+  pointer-events: none;
+  opacity: 1;
+  position: fixed;
+  z-index: 300;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  animation: netflix 2100ms linear forwards;
+  animation-delay: 4s;
+  display: block;
+  border-color: transparent;
+}
+
+#my-name {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  z-index: 5;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  pointer-events: none;
+  /* display: none; */
+}
+
+.name {
+  transform: translateY(-20px);
+}
+
+#intro1 {
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.normal {
+  color: white;
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+#my-text {
+  font-size: x-large;
+}
+
+#masterhacker {
+  text-transform: uppercase;
+  font-weight: bolder;
+  transition: color 500ms ease, background-color 500ms ease;
+}
+
+#masterhacker:hover {
+  background-color: black;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: green;
+  position: relative;
+}
+
+#casual-friends:hover::before {
+  content: "non-Programmer ";
+  color: red;
+}
+
+#github-link {
+  color: #2f81f7;
+}
+
+#links-title {
+  font-size: 35px;
+  padding: 0%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+#buttons {
+  display: flex;
+}
+
+#buttons a img {
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+#buttons a img:hover {
+  outline: 3px solid white;
+}
+
+#germany-audio {
+  display: none;
+}
+
+#dvd {
+  display: block;
+  position: absolute;
+  width: 200px;
+  animation: dvdX 5s linear 0s infinite alternate, dvdY 6.3s linear 0s infinite alternate;
+}
+
+/* #my-name-shadow {
+    background:linear-gradient(#fff, #fff);
+    font-family: "Inter",sans-serif;
+    font-size: 100px;
+    text-decoration:underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    -webkit-background-clip: text;
+    color:transparent;
+} */
+.my-name-shadow {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background: linear-gradient(#eee, #333);
+  font-family: "Inter", sans-serif;
+  font-size: 100px;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+#hi {
+  display: block;
+  position: absolute;
+  top: calc(100vh - 60px);
+  left: calc(100vw - 60px);
+  animation: showNotification 1s ease-in-out forwards, hideNotification 1s ease-in-out 9s forwards;
+}
+
+#name-shadow-container {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  z-index: 3;
+}
+
+/* #name-shadow-container {
+    .my-name-shadow * {
+        transition: transform 1s ease, background-color 1s ease;
+    }
+
+} */
+#name-shadow-container:hover .my-name-shadow.one {
+  animation-name: moveY, coloror;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal, alternate;
+  /* animation: moveY $duration infinite linear both; */
+  /* animation: color $distance infinite linear both alternate; */
+}
+#name-shadow-container:hover .my-name-shadow.two {
+  animation-name: moveY, coloror;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal, alternate;
+  animation-delay: 125ms;
+}
+#name-shadow-container:hover .my-name-shadow.three {
+  animation-name: moveY, coloror;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal, alternate;
+  animation-delay: 250ms;
+}
+#name-shadow-container:hover .my-name-shadow.four {
+  animation-name: moveY, coloror;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal, alternate;
+  animation-delay: 375ms;
+}
+#name-shadow-container:hover .my-name-shadow.five {
+  animation-name: moveY, coloror;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal, alternate;
+  animation-delay: 500ms;
+}
+#name-shadow-container:hover .my-name-shadow.six {
+  animation-name: moveY, coloror;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal, alternate;
+  animation-delay: 625ms;
+}
+#name-shadow-container:hover .my-name-shadow.seven {
+  animation-name: moveY, coloror;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal, alternate;
+  animation-delay: 750ms;
+}
+
+@keyframes moveY {
+  25% {
+    transform: translateY(30px);
+  }
+  75% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes coloror {
+  0% {
+    background: blue;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  100% {
+    background: red;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+@keyframes rotaty {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes dvdY {
+  from {
+    top: -40px;
+  }
+  to {
+    top: calc(100vh - 110px);
+  }
+}
+@keyframes dvdX {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100vw - 200px);
+  }
+}
+@keyframes notify1 {
+  0% {
+    visibility: visible;
+  }
+  16% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes showNotification {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes hideNotification {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+@keyframes netflix {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes main-page {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes body {
+  to {
+    background-color: #232428;
+  }
+}/*# sourceMappingURL=style.css.map */
