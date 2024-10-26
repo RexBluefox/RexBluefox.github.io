@@ -1,17 +1,23 @@
 body {
+  display:flex;
+  justify-content: center;
   margin: 0;
-  background-color: black;
+  background-color: rgb(10,10,10);
   animation: body 1s linear forwards;
   animation-delay: 1s;
   position: relative;
   overflow-x: hidden;
+  font-family: monospace;
 }
 
 #main-page {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
   margin: 0;
-  opacity: 0;
   animation: main-page 1s linear forwards;
   animation-delay: 1s;
+  text-align: center;
 }
 
 #netflix {
@@ -38,7 +44,7 @@ body {
   position: absolute;
   z-index: 5;
   color: white;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
   font-size: 100px;
   font-weight: bold;
   pointer-events: none;
@@ -48,15 +54,18 @@ body {
 .name {
   transform: translateY(-20px);
 }
-
+.my-name {
+  display: flex;
+  justify-content: center;
+}
 #intro1 {
   color: white;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
 }
 
 .normal {
   color: white;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
   position: relative;
 }
 
@@ -86,9 +95,17 @@ body {
 #github-link {
   color: #2f81f7;
 }
-
+#socials {
+  display: flex;
+  justify-content: center;
+}
+#socials p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 #links-title {
-  font-size: 35px;
+  font-size: 30px;
   padding: 0%;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -97,6 +114,7 @@ body {
 
 #buttons {
   display: flex;
+  justify-content: center;
 }
 
 #buttons a img {
@@ -113,10 +131,16 @@ body {
 }
 
 #dvd {
+
+  mask: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg");
   display: block;
   position: absolute;
+  top:0;
+  left:0;
+  z-index: 1000;
   width: 200px;
-  animation: dvdX 5s linear 0s infinite alternate, dvdY 6.3s linear 0s infinite alternate;
+  height:89px;
+  animation: dvdX 5s linear 0s infinite alternate, dvdY 6.3s linear 0s infinite alternate, colororor 10s infinite alternate;
 }
 
 /* #my-name-shadow {
@@ -133,7 +157,7 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
   background: linear-gradient(#eee, #333);
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
   font-size: 100px;
   -webkit-background-clip: text;
   color: transparent;
@@ -292,21 +316,42 @@ body {
     opacity: 0;
   }
 }
-@keyframes netflix {
-  80% {
-    opacity: 1;
+@keyframes colororor {
+  100%,0%{
+    background-color: rgb(255,0,0);
   }
-  100% {
-    opacity: 0;
+  8%{
+    background-color: rgb(255,127,0);
+  }
+  16%{
+    background-color: rgb(255,255,0);
+  }
+  25%{
+    background-color: rgb(127,255,0);
+  }
+  33%{
+    background-color: rgb(0,255,0);
+  }
+  41%{
+    background-color: rgb(0,255,127);
+  }
+  50%{
+    background-color: rgb(0,255,255);
+  }
+  58%{
+    background-color: rgb(0,127,255);
+  }
+  66%{
+    background-color: rgb(0,0,255);
+  }
+  75%{
+    background-color: rgb(127,0,255);
+  }
+  83%{
+    background-color: rgb(255,0,255);
+  }
+  91%{
+    background-color: rgb(255,0,127);
   }
 }
-@keyframes main-page {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes body {
-  to {
-    background-color: #232428;
-  }
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
