@@ -91,18 +91,40 @@ body {
   content: "non-Programmer ";
   color: red;
 }
-
-#github-link {
+#webring {
+  margin: 30px;
+}
+#webring a{
+  color: white;
+  text-decoration: none;
+}
+.ring-link {
+  text-decoration: underline !important;
+}
+.ring-button {
+  border: white 1px solid;
+  height: 20px;
+  width: 20px;;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+#socials a {
   color: #2f81f7;
 }
 #socials {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 #socials p {
   display: flex;
   align-items: center;
-  gap: 10px;
+  column-gap: 10px;
+  margin: 5px;
 }
 #links-title {
   font-size: 30px;
