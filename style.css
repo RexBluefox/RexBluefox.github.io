@@ -118,6 +118,16 @@ body {
   margin-bottom: 20px;
   text-decoration: underline;
 }
+#contact-title {
+  font-size: 30px;
+  padding: 0%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+.not-checked-very-often {
+  color: gray
+}
 
 #buttons {
   display: flex;
